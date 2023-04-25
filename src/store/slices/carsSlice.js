@@ -13,7 +13,10 @@ const carsSlice = createSlice({
     addCar(state, action) {
       // Assumption:
       // action.payload === {name: 'subaru', cost: 14000}
-      state.cars.push({ ...action.payload, id: nanoid() });
+      state.cars.push({
+        ...action.payload,
+        id: nanoid(),
+      });
     },
     removeCar(state, action) {
       // Assumption:
