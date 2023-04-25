@@ -13,7 +13,6 @@ function CarList() {
   const renderedCars = cars.map((car) => (
     <div key={car.id} className='panel'>
       <p>
-        {' '}
         {car.name} - {car.cost} €
       </p>
       <button
@@ -27,7 +26,12 @@ function CarList() {
     </div>
   ));
 
-  return <div>{cars && renderedCars}</div>;
+  return (
+    <div className='car-list'>
+      {renderedCars}
+      <hr />
+    </div>
+  );
 }
 
 export default CarList;
